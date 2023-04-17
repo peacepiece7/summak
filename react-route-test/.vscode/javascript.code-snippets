@@ -1,0 +1,55 @@
+{
+  // scope 속성 주의!
+  "Print to console log": {
+    "prefix": "log",
+    "body": ["console.log($0)"],
+    "description": "Log output to console",
+    "scope": "javascript, typescript, javascriptreact, typescriptreact"
+  },
+  "Print to console error": {
+    "prefix": "elog",
+    "body": ["console.error($0)"],
+    "description": "Log output to console",
+    "scope": "javascript, typescript, javascriptreact, typescriptreact"
+  },
+  "Throw new Error": {
+    "prefix": "tne",
+    "body": ["throw new Error($0)"],
+    "scope": "javascript, typescript, javascriptreact, typescriptreact"
+  },
+  "ES6 import from ": {
+    "prefix": "imf",
+    "body": ["import $0 from '$1'"],
+    "scope": "javascript, typescript, javascriptreact, typescriptreact"
+  },
+  "Try Catch Scope": {
+    "prefix": "tc",
+    "body": "try {\n  $0\n} catch (err) {\n  throw new Error(err)\n}",
+    "scope": "javascript, typescript, javascriptreact, typescriptreact"
+  },
+  "reactFunction": {
+    "prefix": "rfc",
+    "body": "import React from 'react';\n\nexport default function ${1:${TM_FILENAME_BASE}}() {\n\treturn (\n\t\t<div>\n\t\t\t\n\t\t</div>\n\t);\n}\n\n",
+    "description": "Creates a React Function component",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "reactStatelessImplicitReturn": {
+    "prefix": "rsi",
+    "body": "import React from 'react';\n\nexport const ${1:${TM_FILENAME_BASE}} = (props) => {\n\t\t\t$0\n\t};",
+    "description": "Creates a React Function component",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  // postcss 에시입니다. 고쳐쓰세요!
+  "Import Module CSS": {
+    "prefix": "si",
+    "body": ["import styles from './$TM_FILENAME_BASE.module.css'"],
+    "description": "Import PostCSS",
+    "scope": "javascriptreact, typescriptreact"
+  },
+  "ClassName": {
+    "prefix": "cn",
+    "body": ["className={styles.$0}"],
+    "description": "Adding className",
+    "scope": "javascriptreact, typescriptreact"
+  }
+}
